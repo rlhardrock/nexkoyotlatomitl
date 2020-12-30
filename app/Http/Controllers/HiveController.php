@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class HiveController extends Controller
 {
     public function __invoke(){
-        return "Iniciando contruccion de una pg de abejas";
+        return view('hive');
     }
 }
 

@@ -7,16 +7,16 @@ use Illuminate\Http\Request;
 class BeeController extends Controller
 {
     public function index(){
-        return "pagina web en blanco para renderizar abejas" ;
+        return view('bees.index') ;
     }
 
     public function create(){
-        return "pagina con destino para crear ciber apiarios con formulario" ;
+        return view('bees.create') ;
     }
 
-    public function show ($specialty){
-        return "pagina web en blanco para renderizar abejas $specialty" ;
+    public function show ($ekosystem){
+        return view('bees.show', compact('ekosystem')) ;
     }
 }
 
-// index=pg main      create=form       show=elemto particular
+// index=pg main      create=form       show=el. particular
