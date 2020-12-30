@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 //especificar el uso --> traer de su Controller eñ namespace y adicionar
 use App\Http\Controllers\HiveController;
+use App\Http\Controllers\BeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,27 +18,20 @@ use App\Http\Controllers\HiveController;
 
 Route::get('/', HiveController::class);
 
-Route::get('bees', function () {
-    return "pagina web en blanco para renderizar abejas" ;
-});
+Route::get('bees', [BeeController::class,'index']);
 
-Route::get('bees/apiary_create', function () {
-    return "pagina con destino para crear ciber apiarios con formulario" ;
-});
+Route::get('bees/apiary', [BeeController::class,'create']);
 
-// variable, recibirla $ como parametro
-Route::get('bees/{specialty}', function ($specialty) {
-    return "pagina web en blanco para renderizar abejas $specialty" ;
-});
+Route::get('bees/{specialty}', [BeeController::class,'show']);
 
-//  ?  es opcional
+/* //  ?  es opcional
 Route::get('bees/{specialty}/{weather?}', function ($specialty, $weather = null) {
     if($weather){
         return "pagina para distribucion $specialty de las abejas por $weather";
     }else{
         return "pagina para distribucion $specialty de las abejas";
     }
-});
+}); */
 
 
 
