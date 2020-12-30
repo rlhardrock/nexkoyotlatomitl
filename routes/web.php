@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+//especificar el uso --> traer de su Controller eñ namespace y adicionar
+use App\Http\Controllers\HiveController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HiveController::class);
 
 Route::get('bees', function () {
     return "pagina web en blanco para renderizar abejas" ;
