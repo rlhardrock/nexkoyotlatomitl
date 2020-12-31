@@ -23,11 +23,11 @@ class BeeFactory extends Factory
     {
         return [
             'name' => $this -> faker -> sentence(),
-            'ecogeography' => $this -> faker -> paragraph(),
-            'ecosystem' => $this -> faker -> sentence(),
+            'ecogeography' => $this -> faker -> randomElement(['amazonas', 'caucaso', 'urales', 'carpatos', 'patagonia', 'selva_negra','apalaches', 'yucatan', 'andes']),
+            'ecosystem' => $this -> faker -> randomElement(['selva', 'llanura', 'sabana', 'taiga', 'bosque', 'desierto', 'manglar']),
             'latitude' => $this -> faker -> randomElement(['ecuatorial', 'septentrional', 'meridional', 'tropical', 'polar']),
-            'weather' => $this -> faker -> sentence()
-            //'jeraquia' => $this -> faker -> randomElement(['queen', 'worker', 'zangan', 'lonely'])
+            'weather' => $this -> faker -> randomElement(['templado', 'subtropical', 'calido', 'hemiboreal', 'monzonico']),
+            //'job_function' => $this -> faker -> randomElement(['queen', 'worker', 'zangan', 'lonely'])
         ];
     }
 }
