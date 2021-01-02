@@ -20,6 +20,16 @@ class BeeController extends Controller
 
     public function store(Request $request){
         /* return $request->all();     Test de ver objeto enviado*/
+        $request->validate([
+            'name'=>'required | max:15',
+            'ecogeography'=>'required',
+            'ecosystem'=>'required',
+            'latitude'=>'required',
+            'weather'=>'required',
+            'job_function'=>'required',
+        ]);
+        //reglas de validacion
+
         $kbee = new Bee();
         $kbee->name = $request->name;
         $kbee->ecogeography = $request->ecogeography;
@@ -44,6 +54,16 @@ class BeeController extends Controller
     }
 
     public function update(Request $request, Bee $kbee){
+
+        $request->validate([
+            'name'=>'required',
+            'ecogeography'=>'required',
+            'ecosystem'=>'required',
+            'latitude'=>'required',
+            'weather'=>'required',
+            'job_function'=>'required',
+        ]);
+
         $kbee->name = $request->name;
         $kbee->ecogeography = $request->ecogeography;
         $kbee->ecosystem= $request->ecosystem;

@@ -11,12 +11,18 @@
 
             @csrf
 
-            <label><input placeholder="Nombre" type="text" name="name"><br></label>
-            <label><input placeholder="Region" type="text" name="ecogeography"><br></label>
-            <label><input placeholder="Ecosistema" type="text" name="ecosystem"><br></label>
-            <label><input placeholder="Latitud" type="text" name="latitude"><br></label>
-            <label><input placeholder="Clima" type="text" name="weather"><br></label>
-            <label><input placeholder="Funcion" type="text" name="job_function"><br></label>
+            <label><input placeholder="Nombre" type="text" name="name" value="{{old('name')}}"><br></label>
+            @error('name') <br> <small>*{{$message}}</small>@enderror
+            <label><input placeholder="Region" type="text" name="ecogeography" value="{{old('ecogeography')}}"><br></label>
+            @error('ecogeography') <br> <small>*{{$message}}</small>@enderror
+            <label><input placeholder="Ecosistema" type="text" name="ecosystem" value="{{old('ecosystem')}}"><br></label>
+            @error('ecosystem') <br> <small>*{{$message}}</small>@enderror
+            <label><input placeholder="Latitud" type="text" name="latitude" value="{{old('latitude')}}"><br></label>
+            @error('latitude') <br> <small>*{{$message}}</small>@enderror
+            <label><input placeholder="Clima" type="text" name="weather" value="{{old('weather')}}"><br></label>
+            @error('weather') <br> <small>*{{$message}}</small>@enderror
+            <label><input placeholder="Funcion" type="text" name="job_function" value="{{old('job_function')}}"><br></label>
+            @error('job_function') <br> <small>*{{$message}}</small>@enderror
             <br>
             <br>
             <button type="submit">Aterrizar en Colmena</button>
