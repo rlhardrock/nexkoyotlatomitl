@@ -10,4 +10,6 @@
     <p>Region: {{$kbee->ecogeography}}</p>
     <br>
     <a href="{{route('bees.index')}}">Retorno a la Colmena</a>
+    <br>
+    <a href="{{route('bees.edit', $kbee)}}">Recuperar Enjambre</a>
 @endsection
