@@ -1,5 +1,6 @@
 LARAVEL
-
+sudo gedit /etc/hosts 
+//configura dominio local
 
 usar composer directo
 
