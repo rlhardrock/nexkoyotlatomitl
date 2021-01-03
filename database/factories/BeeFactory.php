@@ -22,10 +22,8 @@ class BeeFactory extends Factory
      */
     public function definition()
     {
-        $name = $this -> faker -> randomElement(['rusia', 'alemania','EEUU','francia', 'sudafrika', 'españa', 'inglaterra', 'australia', 'mexico','brasil', 'serbia', 'colombia']);
         return [
-            'name' => $name,
-            'slug' => Str::slug($name),  // ($name,'-')
+            'name' => $this -> faker -> randomElement(['rusia', 'alemania','EEUU','francia', 'sudafrika', 'españa', 'inglaterra', 'australia', 'mexico','brasil', 'serbia', 'colombia']),
             'ecogeography' => $this -> faker -> randomElement(['amazonas', 'caucaso', 'urales', 'carpatos', 'patagonia', 'selva_negra','apalaches', 'yucatan', 'andes', 'polesia', 'pampa', 'glacier', 'indochina', 'escandinavia','madagascar','mediterraneo','baltico', 'balcanes', 'sahara', 'centroamerica', 'indico', 'rocallosas']),
             'ecosystem' => $this -> faker -> randomElement(['selva', 'estepa', 'sabana', 'taiga', 'bosque', 'desierto', 'manglar', 'marisma','juncal', 'paramo', 'tundra','arbustal','pradera', 'conifero','frondoso']),
             'latitude' => $this -> faker -> randomElement(['ecuatorial', 'septentrional', 'meridional', 'tropical', 'artico','antartico']),

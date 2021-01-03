@@ -1,6 +1,6 @@
 @extends('layouts.template')
 
-@section('title', 'Bee '.$kbee->name)
+@section('title', 'Bee '. $kbee->name)
 
 @section('content')
     <h2>pagina web en blanco para renderizar abejas {{$kbee->name}} </h2>

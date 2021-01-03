@@ -16,7 +16,6 @@ class CreateBeesTable extends Migration
         Schema::create('bees', function (Blueprint $table) {
             $table->id();
             $table->string('name'); // Varchar
-            $table->string('slug'); // uso para URL Prof
             $table->string('ecogeography');
             $table->string('ecosystem');
             $table->string('latitude');
