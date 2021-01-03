@@ -63,3 +63,6 @@ php artisan make:factory ClassFactory
 
 php artisan mae:request StoreClass
 //creacion de archivo para autenticacion y reglas por cada formulario
+
+php artisan r:l
+//lista rutas en terminal

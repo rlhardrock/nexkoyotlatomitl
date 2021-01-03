@@ -7,7 +7,7 @@ use App\Http\Controllers\BeeController;
 
 Route::get('/', HiveController::class);
 
-Route::get('bees', [BeeController::class,'index'])->name('bees.index');
+/* Route::get('bees', [BeeController::class,'index'])->name('bees.index');
 
 Route::get('bees/create', [BeeController::class,'create'])->name('bees.create');
 
@@ -20,3 +20,7 @@ Route::get('bees/{kbee}/edit', [BeeController::class,'edit'])->name('bees.edit')
 Route::put('bees/{kbee}', [BeeController::class,'update'])->name('bees.update'); //Actualizar al formulario
 
 Route::delete('bees/{kbee}',[BeeController::class,'destroy'])->name('bees.destroy');
+ */
+
+ Route::resource('bees', BeeController::class);
+ /* construir al final de hacer todas las vistas o CRUD's */
