@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Bee;
+use App\Http\Requests\StoreBee;
 
 
 class BeeController extends Controller
@@ -18,19 +19,17 @@ class BeeController extends Controller
         return view('bees.create') ;
     }
 
-    public function store(Request $request){
+    public function store(StoreBee $request){
         /* return $request->all();     Test de ver objeto enviado*/
-        $request->validate([
-            'name'=>'required | max:15',
-            'ecogeography'=>'required',
-            'ecosystem'=>'required',
-            'latitude'=>'required',
-            'weather'=>'required',
-            'job_function'=>'required',
-        ]);
-        //reglas de validacion
+
+        /* regla de validacion corta */
+       /*  $request->validate([
+            'name' => 'required' | max(15)
+        ]); */
+
 
         $kbee = new Bee();
+
         $kbee->name = $request->name;
         $kbee->ecogeography = $request->ecogeography;
         $kbee->ecosystem= $request->ecosystem;

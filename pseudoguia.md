@@ -58,3 +58,8 @@ php artisan Class:seed
 
 php artisan make:factory ClassFactory
 //crear una fabrica de datos 
+
+
+
+php artisan mae:request StoreClass
+//creacion de archivo para autenticacion y reglas por cada formulario
