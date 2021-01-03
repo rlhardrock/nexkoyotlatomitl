@@ -66,3 +66,6 @@ php artisan mae:request StoreClass
 
 php artisan r:l
 //lista rutas en terminal
+
+
+AppServicesProvider   cambiador de palabras paea las rutas

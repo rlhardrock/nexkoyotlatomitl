@@ -9,6 +9,8 @@
         @foreach ($bees as $bee)
             <li>
                 <a href="{{route('bees.show',$bee->id)}}">{{$bee->name}}</a>
+                <br>
+                {{route('bees.show',$bee->slug)}}
             </li>
         @endforeach
     </ul>

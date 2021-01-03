@@ -13,4 +13,9 @@ class Bee extends Model
     /* protected $fillable = ['name','ecogeography','ecosystem','latitude','weather','job_function']; */
     protected $guarded = [];
 
+    /* public function getRouteKeyName()
+    {
+        return 'slug';
+    } */
+
 }
