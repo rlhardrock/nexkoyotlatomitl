@@ -12,4 +12,12 @@
     <a href="{{route('bees.index')}}">Retorno a la Colmena</a>
     <br>
     <a href="{{route('bees.edit', $kbee)}}">Recuperar Enjambre</a>
+
+    <form action="{{route('bees.destroy', $kbee)}}" method="POST">
+        @csrf
+        @method('delete')
+        <button type="submit">Liberar Colonia</button>
+    </form>
+
+
 @endsection

@@ -79,6 +79,12 @@ class BeeController extends Controller
 
         return redirect()->route('bees.show', $kbee);
     }
+
+    public function destroy(Bee $kbee){
+        $kbee->delete();
+        return redirect()->route('bees.index');
+    }
+
 }
 
 // index=pg main      create=form       show=el. particular

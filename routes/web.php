@@ -18,3 +18,5 @@ Route::get('bees/{kbee}', [BeeController::class,'show'])->name('bees.show');
 Route::get('bees/{kbee}/edit', [BeeController::class,'edit'])->name('bees.edit');
 
 Route::put('bees/{kbee}', [BeeController::class,'update'])->name('bees.update'); //Actualizar al formulario
+
+Route::delete('bees/{kbee}',[BeeController::class,'destroy'])->name('bees.destroy');
