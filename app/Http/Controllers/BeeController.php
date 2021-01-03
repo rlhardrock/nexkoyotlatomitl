@@ -20,13 +20,14 @@ class BeeController extends Controller
     }
 
     public function store(StoreBee $request){
-        /* return $request->all();     Test de ver objeto enviado*/
+       /* return $request->all();     Test de ver objeto enviado*/
 
-        /* regla de validacion corta */
+       /* regla de validacion antigua */
        /*  $request->validate([
             'name' => 'required' | max(15)
         ]); */
 
+        /* modo convencional
 
         $kbee = new Bee();
 
@@ -37,7 +38,9 @@ class BeeController extends Controller
         $kbee->weather = $request->weather;
         $kbee->job_function = $request->job_function;
 
-        $kbee->save();
+        $kbee->save(); */
+
+        $kbee = Bee::create($request->all());
 
         return redirect()->route('bees.show', $kbee);
     }
@@ -63,14 +66,16 @@ class BeeController extends Controller
             'job_function'=>'required',
         ]);
 
-        $kbee->name = $request->name;
+       /*  $kbee->name = $request->name;
         $kbee->ecogeography = $request->ecogeography;
         $kbee->ecosystem= $request->ecosystem;
         $kbee->latitude = $request->latitude;
         $kbee->weather = $request->weather;
         $kbee->job_function = $request->job_function;
 
-        $kbee->save();
+        $kbee->save();  */
+
+        $kbee->update($request->all());
 
         return redirect()->route('bees.show', $kbee);
     }
