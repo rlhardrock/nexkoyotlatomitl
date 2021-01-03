@@ -34,4 +34,6 @@ Route::view('apitech', 'apitech')->name('apitech');
 
 Route::get('contact', function(){
     $correo = new SpectreMail;
-})->name('apitech');
+    Mail::to('rlhardrock@gmail.com')->send($correo);
+    return "OK";
+});
