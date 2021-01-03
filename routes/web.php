@@ -4,9 +4,7 @@ use Illuminate\Support\Facades\Route;
 //especificar el uso --> traer de su Controller eñ namespace y adicionar
 use App\Http\Controllers\HiveController;
 use App\Http\Controllers\BeeController;
-
-use App\Mail\SpectreMail;
-use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\ContactanosController;
 
 Route::get('/', HiveController::class)->name('home');
 
@@ -32,8 +30,9 @@ Route::resource('bees', BeeController::class);
 Route::view('apitech', 'apitech')->name('apitech');
 /* solo contenido estatico, sin acceso a BBDD */
 
-Route::get('contact', function(){
-    $correo = new SpectreMail;
-    Mail::to('rlhardrock@gmail.com')->send($correo);
-    return "OK";
-});
+Route::get('contactanos', [ContactanosController::class, 'index'])->name('contactanos.index');
+
+
+Route::post('contactanos', [ContactanosController::class, 'store'])->name('contactanos.store');
+
+

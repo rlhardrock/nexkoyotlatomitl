@@ -9,6 +9,8 @@
 
             <li> <a href="{{route('apitech')}}" class="{{request()->routeIs('apitech') ? 'active':''}}">APITECH</a></li>
 
+            <li> <a href="{{route('contactanos.index')}}" class="{{request()->routeIs('contactanos.index') ? 'active':''}}">CONTACTANOS</a></li>
+
 
         </ul>
     </nav>

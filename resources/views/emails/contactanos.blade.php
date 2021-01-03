@@ -9,5 +9,9 @@
 <body>
     <h1>CORREO</h1>
     <P>Correo de prueba desde Laravel 8</P>
+
+    <p><strong>Nombre:</strong>{{$contacto['name']}}</p><br><br>
+    <p><strong>Correo:</strong>{{$contacto['correo']}}</p><br><br>
+    <p><strong>Mensaje:</strong>{{$contacto['mensaje']}}</p><br><br>
 </body>
 </html>

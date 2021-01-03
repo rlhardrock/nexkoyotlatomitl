@@ -12,14 +12,16 @@ class SpectreMail extends Mailable
     use Queueable, SerializesModels;
 
     public $subject = "INFORMACION";
+
+    public $contacto;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($contacto)
     {
-        //
+        $this->contacto = $contacto;
     }
 
     /**
@@ -29,6 +31,6 @@ class SpectreMail extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.contact');
+        return $this->view('emails.contactanos');
     }
 }
